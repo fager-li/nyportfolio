@@ -4,21 +4,44 @@
 <head>
   <meta charset="utf-8">
 
-  <title>The HTML5 Herald</title>
+  <title>fagerli</title>
   <meta name="description" content="The HTML5 Herald">
   <meta name="author" content="SitePoint">
 
-  <link rel="stylesheet" href="css/styles.css?v=1.0">
+  <link rel="stylesheet" href="css/style.css">
 
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
   <![endif]-->
+    <script
+  src="http://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+    <script src="bower_components/Flowtype.js/flowtype.js">
+    </script>
+   
 </head>
 
 <body>
+    <div id="detector"></div>
+    
+    <div id="plane">
+    
+        <div id="image">
+            <img src="img/img1.png">
+            
+        
+        </div>
+        
+    </div>
+    
+    <p class="target">this is a test of flowtype.js, mon dieu!</p>
     
     
+    <script>$('body').flowtype();</script>
     
-  <script src="js/scripts.js"></script>
+     <script src="js/js-main.js"></script>
+    
+    
 </body>
 </html>
