@@ -1,7 +1,37 @@
+ /*var images = [
+ 
+     {cap:"this website for Digital Norway.", img:"../img/1.png"}
+     {cap:"the 2016 study catalogue for Westerdals Oslo ACT." img:"../img/2.png"},
+     {cap:"an app for finding parking spaces and paying for them.", img:"../img/3.png"},
+     {cap:"the new website for the National Library of Norway.", img:"../img/4.png"},
+     {cap:"generative posters and other creative coding stuff.", img:"../img/5.jpg"},
+     
+ ];*/
+
+var caps = [
+    
+    "this website for Digital Norway.",
+    "the 2016 study catalogue for Westerdals Oslo ACT.",
+    "an app for finding parking spaces and paying for them.",
+    "the new website for the National Library of Norway.",
+    "generative posters and other creative coding stuff."
+           
+            ]
+
+var images = [
+    
+    "img/1.png",
+    "img/2.png",
+    "img/3.png",
+    "img/4.png",
+    "img/5.jpg"
+           
+            ]
 
 
+var c = 0;
 
-
+console.log(caps[0]);
 
 var mouseX, mouseY;
 
@@ -19,8 +49,16 @@ $("#plane").css({transform:"rotateX("+posX+"deg) rotateY("+posY+"deg)"});
    
     $("#myelement").css({left:0, backgroundColor:'blue'})
     
-   // $("#plane").css({transform: 'translateY(300px) rotateZ(120deg)'})
-
+   
+    
+    $("#plane").css("background-image", 'url(' + images[c] + ')');
+    
+    if (posX > 90 && posX < 95) {
+        
+        c++;
+  
+    }
+      console.log(posX);
     
 });
 
