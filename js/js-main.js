@@ -12,7 +12,7 @@ var caps = [
     
     "this website for Digital Norway.",
     "the 2016 study catalogue for Westerdals Oslo ACT.",
-    "an app for finding parking spaces and paying for them.",
+    "like an app for finding parking spaces and paying for them.",
     "the new website for the National Library of Norway.",
     "generative posters and other creative coding stuff."
            
@@ -46,21 +46,37 @@ $("#detector").mousemove(function(event) {
     
 $("#plane").css({transform:"rotateX("+posX+"deg) rotateY("+posY+"deg)"});
     
-   
-    $("#myelement").css({left:0, backgroundColor:'blue'})
-    
-   
-    
     $("#plane").css("background-image", 'url(' + images[c] + ')');
+    $("#desc").text(caps[c]);
     
-    if (posX > 90 && posX < 95) {
+    if (posX > 88 && posX < 93) {
         
-        c++;
+        
+        
+        function getRandomInt(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min)) + min; 
+        }
+        
+        c = getRandomInt(0,4);
   
     }
+    
+    if (posX < 90) {
+ 
+    $("#plane").css({transform:"rotateZ(180deg)"});
+    
+} else if (posX > 90) {
+ 
+     $("#plane").css({transform:"rotateZ(180deg)"});
+    
+}
+
       console.log(posX);
     
 });
+
 
 //Y = (X-A)/(B-A) * (D-C) + C
 // X = input, Y = Output, A-B = Input range, D-C = Output range

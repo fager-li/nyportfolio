@@ -6,7 +6,13 @@
 body {
     
     padding: 0px,0px,0px,0px;
-    background-color: "#000000";
+    /*background-color: #000000;*/
+}
+
+#desc {
+ 
+    color: gray;
+    
 }
 
 p {
@@ -35,7 +41,7 @@ p {
 #plane {
  
     width: 40%;
-    background-image: url(../img/a.png);
+  
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
