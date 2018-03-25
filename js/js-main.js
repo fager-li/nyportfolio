@@ -17,13 +17,21 @@ function draw() {
     fill(255);
     strokeWeight(2);
     stroke(51,0,255);
-
-   translate(0,0-20);
     angleMode(DEGREES);
-    rotateY(rotateAmnt);
-    box(window.innerHeight);
-    console.log(rotateAmnt);
-
+    rectMode(CENTER);
+    translate(0,0,(window.innerWidth/2)*-1);
+    //translate(-window.innerWidth/2, -window.innerHeight/2);
+    rotateY(-rotateAmnt);
+    push();
+    translate(0,0,window.innerWidth/2);
+    rect(0,0,window.innerWidth,window.innerHeight);
+    pop();
     
+    push();
+    translate(window.innerWidth/2,0,0);
+    rotateY(90);
+    rect(0,0,window.innerWidth,window.innerHeight);
+    
+    pop();
     
 }
